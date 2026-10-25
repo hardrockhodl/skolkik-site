@@ -1,0 +1,25 @@
+{
+  "name": "matsedel-are",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+
+  // 04:00 UTC, alltså 05 eller 06 svensk tid.
+  "triggers": {
+    "crons": ["0 4 * * *"]
+  },
+
+  "kv_namespaces": [
+    {
+      "binding": "MENU",
+      // matsedel-are-MENU
+      "id": "3dfbfbcd21884a728dbc216f60d4e557"
+    }
+  ],
+
+  "vars": {
+    "SOURCE_URL": "https://www.are.se/kommun-och-politik/mat-och-maltider/mat-i-forskola-och-skola/matsedel-for-grundskolan",
+    "MUNICIPALITY": "Åre kommun",
+    "CAL_NAME": "Skolmat Åre kommun"
+  }
+}
