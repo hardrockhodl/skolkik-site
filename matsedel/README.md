@@ -33,4 +33,6 @@ npx wrangler login
 npm run deploy
 ```
 
-Hamnar på `https://matsedel-are.<konto>.workers.dev`.
+Hamnar på `https://are.skolkik.se` (egen domän, se `routes` i
+`wrangler.jsonc`) och `https://matsedel-are.chrs-lrssn.workers.dev`.
+Kalendern prenumereras på som `webcal://are.skolkik.se/matsedel.ics`.

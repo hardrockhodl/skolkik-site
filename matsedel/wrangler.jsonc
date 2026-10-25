@@ -4,6 +4,9 @@
   "compatibility_date": "2026-10-01",
   "workers_dev": true,
 
+  // Egen domän i zonen skolkik.se; Cloudflare skapar DNS-posten och certifikatet.
+  "routes": [{ "pattern": "are.skolkik.se", "custom_domain": true }],
+
   // 04:00 UTC, alltså 05 eller 06 svensk tid.
   "triggers": {
     "crons": ["0 4 * * *"]
