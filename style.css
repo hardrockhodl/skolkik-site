@@ -147,6 +147,8 @@ img { max-width: 100%; display: block; }
   line-height: 1.1;
   box-shadow: 0 10px 30px -10px rgba(0,0,0,.6);
 }
+a.store-badge { text-decoration: none; transition: transform .15s ease; }
+a.store-badge:hover, a.store-badge:focus-visible { transform: translateY(-2px); }
 .store-badge svg { width: 28px; height: 28px; fill: #fff; }
 .store-badge small { display: block; font-size: 12px; font-weight: 500; opacity: .8; }
 
