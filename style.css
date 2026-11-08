@@ -421,3 +421,9 @@ body:not(.home) footer {
   font-size: 15px;
 }
 body:not(.home) footer a { color: var(--muted); }
+
+/* ---------- Artikelsidor ---------- */
+
+.article .phone { width: 260px; margin: 28px auto; }
+.article .cta { margin: 28px 0 8px; }
+.article h3 { margin-top: 28px; }
