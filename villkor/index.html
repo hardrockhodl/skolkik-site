@@ -8,16 +8,47 @@
   <link rel="canonical" href="https://skolkik.se/villkor/">
   <link rel="icon" href="/icon.png">
   <link rel="stylesheet" href="/style.css">
+  <!-- Meta Pixel. Laddas inte om besökaren sagt nej tack. Utan svar ligger den i läget revoke tills bannern i samtycke.js får ett ja. -->
+  <script>
+  (function(){
+    var val=null;try{val=localStorage.getItem('skolkik-samtycke')}catch(e){}
+    if(val==='nej')return;
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    if(val!=='ja')fbq('consent', 'revoke');
+    fbq('init', '1129544359827172');
+    fbq('track', 'PageView');
+  })();
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1129544359827172&ev=PageView&noscript=1"
+  /></noscript>
+  <script src="/samtycke.js" defer></script>
+  <!-- End Meta Pixel -->
 </head>
-<body>
-<main>
-  <header class="site">
-    <img src="/icon.png" alt="">
-    <a href="/">SkolKik</a>
-  </header>
+<body class="page">
 
-  <h1>Användarvillkor</h1>
-  <p class="muted">Senast uppdaterade 5 november 2026</p>
+<header class="hero hero-page">
+  <div class="wrap">
+    <nav class="topbar">
+      <a class="brand" href="/"><img src="/icon.png" alt=""><span>Skol<b>Kik</b></span></a>
+      <a class="topbar-link" href="/#fragor">Frågor</a>
+    </nav>
+    <div class="page-head">
+      <h1>Användarvillkor</h1>
+      <p class="page-meta">Senast uppdaterade 5 november 2026</p>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40c240 40 480 40 720 20S1200-10 1440 30v50H0z"/></svg>
+</header>
+
+<main>
   <nav class="lang"><a href="#english">In English</a></nav>
 
   <p>De här villkoren gäller när du använder appen SkolKik från netEYE Sweden AB, org.nr 559542-5868 ("vi"). Utöver dem gäller Apples <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">standardlicensavtal för appar</a> om du har hämtat appen från App Store, och <a href="https://play.google.com/about/play-terms/">Google Plays användarvillkor</a> om du har hämtat den från Google Play.</p>
@@ -73,9 +104,14 @@
   <h2>6. Changes, law and contact</h2>
   <p>We may change these terms and will announce material changes in the app or on skolkik.se before they apply. Swedish law applies. Contact: <a href="mailto:hej@skolkik.se">hej@skolkik.se</a>.</p>
 
-  <footer>
-    <p><a href="/">SkolKik</a> · <a href="/integritet/">Integritetspolicy / Privacy</a> · netEYE Sweden AB</p>
-  </footer>
 </main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>SkolKik är inte gjort av Unikum, skolan eller kommunen.</p>
+    <p><a href="/unikum-veckobrev/">Så hinner du med veckobreven i Unikum</a> · <a href="/unikum-franvaro/">Så håller du koll på frånvaron i Unikum</a> · <a href="/unikum-familj/">Unikum Familj och SkolKik</a></p>
+    <p><a href="/integritet/">Integritetspolicy</a> · <a href="/villkor/">Användarvillkor</a> · <a href="/integritet/#kakor" class="samtycke-oppna">Kakor</a> · netEYE Sweden AB, org.nr 559542-5868</p>
+  </div>
+</footer>
 </body>
 </html>

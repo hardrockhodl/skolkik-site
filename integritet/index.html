@@ -8,20 +8,51 @@
   <link rel="canonical" href="https://skolkik.se/integritet/">
   <link rel="icon" href="/icon.png">
   <link rel="stylesheet" href="/style.css">
+  <!-- Meta Pixel. Laddas inte om besökaren sagt nej tack. Utan svar ligger den i läget revoke tills bannern i samtycke.js får ett ja. -->
+  <script>
+  (function(){
+    var val=null;try{val=localStorage.getItem('skolkik-samtycke')}catch(e){}
+    if(val==='nej')return;
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    if(val!=='ja')fbq('consent', 'revoke');
+    fbq('init', '1129544359827172');
+    fbq('track', 'PageView');
+  })();
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1129544359827172&ev=PageView&noscript=1"
+  /></noscript>
+  <script src="/samtycke.js" defer></script>
+  <!-- End Meta Pixel -->
 </head>
-<body>
-<main>
-  <header class="site">
-    <img src="/icon.png" alt="">
-    <a href="/">SkolKik</a>
-  </header>
+<body class="page">
 
-  <h1>Integritetspolicy</h1>
-  <p class="muted">Senast uppdaterad 5 november 2026</p>
+<header class="hero hero-page">
+  <div class="wrap">
+    <nav class="topbar">
+      <a class="brand" href="/"><img src="/icon.png" alt=""><span>Skol<b>Kik</b></span></a>
+      <a class="topbar-link" href="/#fragor">Frågor</a>
+    </nav>
+    <div class="page-head">
+      <h1>Integritetspolicy</h1>
+      <p class="page-meta">Senast uppdaterad 9 november 2026</p>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40c240 40 480 40 720 20S1200-10 1440 30v50H0z"/></svg>
+</header>
+
+<main>
   <nav class="lang"><a href="#english">In English</a></nav>
 
   <div class="card">
-    <strong>Kort sagt:</strong> SkolKik samlar inte in några uppgifter om dig eller dina barn. Allt som appen hämtar från Unikum stannar i din telefon, på iPhone som på Android.
+    <strong>Kort sagt:</strong> SkolKik samlar inte in några uppgifter om dig eller dina barn. Allt som appen hämtar från Unikum stannar i din telefon, på iPhone som på Android. Webbplatsen skolkik.se har en mätpixel från Meta som bara används om du säger ja till den.
   </div>
 
   <h2>Vem står bakom SkolKik</h2>
@@ -51,10 +82,16 @@
   <h2>Vad vi inte gör</h2>
   <ul>
     <li>Vi har ingen server som tar emot uppgifter om dig eller dina barn från appen.</li>
-    <li>Vi använder ingen analys, ingen spårning och ingen reklam.</li>
+    <li>Appen använder ingen analys, ingen spårning och ingen reklam. På webbplatsen skolkik.se finns en mätpixel från Meta som bara används om du godkänner den, se <a href="#kakor">Kakor på webbplatsen</a>.</li>
     <li>Vi säljer eller delar inga uppgifter med någon.</li>
     <li>De enda andra appen pratar med är Unikum, kommunens eller skolans inloggning om du använder BankID, Apple respektive Google (köp och AI-modellen), vår matsedeltjänst och Matilda om du valt ett kök där.</li>
   </ul>
+
+  <h2 id="kakor">Kakor på webbplatsen skolkik.se</h2>
+  <p>Det här avsnittet gäller bara webbplatsen, inte appen. Appen använder inga kakor och ingen spårning.</p>
+  <p>På skolkik.se använder vi Meta-pixeln, ett mätverktyg från Meta Platforms Ireland Ltd, för att se om våra annonser på Facebook och Instagram leder hit och om besökaren går vidare till App Store eller Google Play. Pixeln sätter kakor i din webbläsare (bland annat _fbp, som sparas i tre månader) och skickar till Meta vilken sida du besökt, att du klickat på en butiksknapp, din IP-adress och uppgifter om webbläsaren. Är du inloggad på Facebook eller Instagram kan Meta koppla besöket till ditt konto där. Meta behandlar uppgifterna också för egna ändamål, se <a href="https://www.facebook.com/privacy/policy/">Metas integritetspolicy</a>.</p>
+  <p>Pixeln är avstängd tills du trycker Okej i rutan längst ner på sidan. Trycker du Nej tack laddas den inte alls. Rättslig grund är ditt samtycke (lagen om elektronisk kommunikation och dataskyddsförordningen, artikel 6.1 a). Ditt val sparas i webbläsaren, och du kan när som helst ändra det eller ta tillbaka samtycket via länken Kakor längst ner på varje sida.</p>
+  <p>Webbplatsen ligger på GitHub Pages (GitHub, Inc.), som ser din IP-adress för att kunna visa sidan. Vi har ingen annan besöksstatistik.</p>
 
   <h2>Köp och prenumerationer</h2>
   <p>Köp och prenumerationer hanteras av Apple via App Store eller av Google via Google Play, beroende på var du hämtade appen. Vi får ingen betalningsinformation och vet inte vem du är; vi ser bara att ett köp har gjorts. Apples och Googles behandling beskrivs i deras egna integritetspolicyer.</p>
@@ -71,10 +108,10 @@
   <hr id="english" style="margin:48px 0;border:none;border-top:1px solid var(--line)">
 
   <h1>Privacy policy</h1>
-  <p class="muted">Last updated 5 November 2026</p>
+  <p class="muted">Last updated 9 November 2026</p>
 
   <div class="card">
-    <strong>In short:</strong> SkolKik does not collect any data about you or your children. Everything the app fetches from Unikum stays on your phone, on iPhone and Android alike.
+    <strong>In short:</strong> SkolKik does not collect any data about you or your children. Everything the app fetches from Unikum stays on your phone, on iPhone and Android alike. The skolkik.se website has a Meta measurement pixel that is only used if you accept it.
   </div>
 
   <h2>Who is behind SkolKik</h2>
@@ -88,7 +125,13 @@
   <p><strong>School menu.</strong> The school lunch on the start page is fetched from are.skolkik.se, our service that reads Åre municipality's public menu. The request contains no data about you or your children, no account and no identifier. We keep no logs of the requests. The service runs on Cloudflare, which needs the phone's IP address to respond. If your child's school is outside Åre, you can instead choose a school kitchen in Matilda (menu.matildaplatform.com), used by many municipalities for their menus, in the app's settings. The phone then fetches the menu directly from there; the request contains only the kitchen's id and the date, nothing about you or your children. Matilda sees the phone's IP address; see Matilda's own policy for how it is handled. You can turn the menu off in the app's settings.</p>
 
   <h2>What we do not do</h2>
-  <p>We have no server receiving data about you or your children from the app, use no analytics, tracking or advertising, and do not sell or share any data. The only other parties the app talks to are Unikum, your municipality's or school's login if you use BankID, Apple or Google (purchases and the AI model), our school menu service, and Matilda if you chose a kitchen there.</p>
+  <p>We have no server receiving data about you or your children from the app; the app uses no analytics, tracking or advertising, and we do not sell or share any data. The skolkik.se website has a Meta measurement pixel that is only used if you accept it; see <a href="#cookies">Cookies on the website</a>. The only other parties the app talks to are Unikum, your municipality's or school's login if you use BankID, Apple or Google (purchases and the AI model), our school menu service, and Matilda if you chose a kitchen there.</p>
+
+  <h2 id="cookies">Cookies on the skolkik.se website</h2>
+  <p>This section applies to the website only, not the app. The app uses no cookies and no tracking.</p>
+  <p>On skolkik.se we use the Meta Pixel, a measurement tool from Meta Platforms Ireland Ltd, to see whether our ads on Facebook and Instagram bring visitors here and whether they go on to the App Store or Google Play. The pixel sets cookies in your browser (including _fbp, kept for three months) and sends Meta the page you visited, that you clicked a store button, your IP address and browser details. If you are signed in to Facebook or Instagram, Meta may link the visit to your account. Meta also processes the data for its own purposes; see <a href="https://www.facebook.com/privacy/policy/">Meta's privacy policy</a>.</p>
+  <p>The pixel is off until you press Okej (OK) in the box at the bottom of the page. If you press Nej tack (No thanks) it is not loaded at all. The legal basis is your consent (the Swedish Electronic Communications Act and GDPR article 6(1)(a)). Your choice is stored in your browser, and you can change it or withdraw consent at any time via the Kakor (Cookies) link at the bottom of every page.</p>
+  <p>The website is hosted on GitHub Pages (GitHub, Inc.), which sees your IP address in order to serve the page. We have no other visitor statistics.</p>
 
   <h2>Purchases</h2>
   <p>Purchases and subscriptions are handled by Apple through the App Store or by Google through Google Play, depending on where you downloaded the app. We receive no payment information and do not know who you are; we only see that a purchase was made. See Apple's and Google's privacy policies.</p>
@@ -96,9 +139,14 @@
   <h2>Contacting us</h2>
   <p>If you email us, we use your email address and message to reply, and delete them when they are no longer needed. You may also lodge a complaint with the Swedish Authority for Privacy Protection (IMY).</p>
 
-  <footer>
-    <p><a href="/">SkolKik</a> · <a href="/villkor/">Användarvillkor / Terms</a> · netEYE Sweden AB</p>
-  </footer>
 </main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>SkolKik är inte gjort av Unikum, skolan eller kommunen.</p>
+    <p><a href="/unikum-veckobrev/">Så hinner du med veckobreven i Unikum</a> · <a href="/unikum-franvaro/">Så håller du koll på frånvaron i Unikum</a> · <a href="/unikum-familj/">Unikum Familj och SkolKik</a></p>
+    <p><a href="/integritet/">Integritetspolicy</a> · <a href="/villkor/">Användarvillkor</a> · <a href="/integritet/#kakor" class="samtycke-oppna">Kakor</a> · netEYE Sweden AB, org.nr 559542-5868</p>
+  </div>
+</footer>
 </body>
 </html>

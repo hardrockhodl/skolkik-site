@@ -15,6 +15,7 @@
   <meta property="og:locale" content="sv_SE">
   <meta name="twitter:card" content="summary">
   <meta name="theme-color" content="#1d4fd7">
+  <meta name="facebook-domain-verification" content="5di1ors2cxwsno2fn096u8yr7aofuv" />
   <link rel="icon" href="/icon.png">
   <link rel="apple-touch-icon" href="/img/icon-512.png">
   <link rel="stylesheet" href="/style.css">
@@ -50,6 +51,29 @@
     ]
   }
   </script>
+  <!-- Meta Pixel. Laddas inte om besökaren sagt nej tack. Utan svar ligger den i läget revoke tills bannern i samtycke.js får ett ja. -->
+  <script>
+  (function(){
+    var val=null;try{val=localStorage.getItem('skolkik-samtycke')}catch(e){}
+    if(val==='nej')return;
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    if(val!=='ja')fbq('consent', 'revoke');
+    fbq('init', '1129544359827172');
+    fbq('track', 'PageView');
+  })();
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1129544359827172&ev=PageView&noscript=1"
+  /></noscript>
+  <script src="/samtycke.js" defer></script>
+  <!-- End Meta Pixel -->
 </head>
 <body class="home">
 
@@ -70,7 +94,7 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.200 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.700-1-2.700-4.1zM13.9 5c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg>
             <span><small>Kommer snart till</small>App Store</span>
           </span>
-          <a class="play-badge" href="https://play.google.com/store/apps/details?id=se.skolkik.app">
+          <a class="play-badge" href="https://play.google.com/store/apps/details?id=se.skolkik.app&amp;referrer=utm_source%3Dmeta%26utm_medium%3Dpaid%26utm_campaign%3Dlansering">
             <img src="/img/google-play-badge.svg" alt="Ladda ned på Google Play" width="169" height="50">
           </a>
           <span class="trial">Första månaden gratis</span>
@@ -195,7 +219,7 @@
   <div class="wrap">
     <p>SkolKik är inte gjort av Unikum, skolan eller kommunen.</p>
     <p><a href="/unikum-veckobrev/">Så hinner du med veckobreven i Unikum</a> · <a href="/unikum-franvaro/">Så håller du koll på frånvaron i Unikum</a> · <a href="/unikum-familj/">Unikum Familj och SkolKik</a></p>
-    <p><a href="/integritet/">Integritetspolicy</a> · <a href="/villkor/">Användarvillkor</a> · netEYE Sweden AB, org.nr 559542-5868</p>
+    <p><a href="/integritet/">Integritetspolicy</a> · <a href="/villkor/">Användarvillkor</a> · <a href="/integritet/#kakor" class="samtycke-oppna">Kakor</a> · netEYE Sweden AB, org.nr 559542-5868</p>
   </div>
 </footer>
 </body>
