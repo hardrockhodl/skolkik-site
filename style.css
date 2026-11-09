@@ -136,6 +136,7 @@ img { max-width: 100%; display: block; }
 
 .store-badge {
   display: inline-flex;
+  text-decoration: none;
   align-items: center;
   gap: 10px;
   padding: 10px 20px 10px 16px;
@@ -146,7 +147,9 @@ img { max-width: 100%; display: block; }
   font-size: 20px;
   line-height: 1.1;
   box-shadow: 0 10px 30px -10px rgba(0,0,0,.6);
+  transition: transform .15s ease;
 }
+.store-badge:hover, .store-badge:focus-visible { transform: translateY(-2px); }
 .play-badge { display: inline-block; line-height: 0; border-radius: 9px; transition: transform .15s ease; }
 .play-badge img { height: 50px; width: auto; }
 .play-badge:hover, .play-badge:focus-visible { transform: translateY(-2px); }
