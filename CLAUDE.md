@@ -22,5 +22,6 @@ Kort, och läsbar utan att ha sett arbetet: alla ändrade filer, vilka sidor som
 
 ## Att tänka på
 - Samma topp och footer på alla sidor. Ny sida läggs också i `sitemap.xml`.
+- `/versioner/` är versionshistoriken, uppdelad på iPhone och Android. Ny version i butik läggs överst under rätt plattform, med bara det som faktiskt är släppt. Ändra samtidigt datumet i sidhuvudet, `dateModified` och `lastmod` i `sitemap.xml`.
 - Jobbdatorns Cisco Umbrella spärrar skolkik.se. Kontrollera via `dig @1.1.1.1` innan något kallas trasigt.
 - Commit-meddelanden på svenska utan å, ä och ö, som i historiken.

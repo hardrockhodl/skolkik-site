@@ -413,6 +413,41 @@ nav.lang { margin: 0 0 24px; font-size: 15px; }
 .article .cta { margin: 28px 0 8px; }
 .article h3 { margin-top: 28px; }
 
+/* ---------- Versionshistorik (/versioner/) ---------- */
+
+.platform-nav { display: flex; gap: 10px; margin: 20px 0 0; }
+.platform-nav a {
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--blue-soft);
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+.platform-nav a:hover, .platform-nav a:focus-visible { background: var(--blue); color: #fff; }
+
+.versions section { scroll-margin-top: 16px; }
+.versions section h2 { font-size: 28px; margin-top: 44px; }
+.release {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin: 12px 0;
+}
+.release h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 12px;
+  margin: 0 0 6px !important;
+  font-size: 20px !important;
+}
+.release time { font-size: 15px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+.release ul { margin: 0; padding-left: 20px; }
+.release li { margin: 4px 0; }
+
 /* Samtyckesbanner för Meta-pixeln (samtycke.js). Kroppen får luft nertill så att bannern aldrig täcker något. */
 body.har-samtycke { padding-bottom: var(--samtycke-h, 0px); }
 
