@@ -1,0 +1,19 @@
+{
+	"name": "skolkik-butik",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-10-01",
+	"workers_dev": true,
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "skolkik-butik",
+			"database_id": "01b30cd6-cb7b-41ca-b99e-3d42b6c7eaac",
+			"migrations_dir": "migrations"
+		}
+	],
+	"vars": {
+		// Appar vars händelser tas emot, kommaseparerat.
+		"BUNDLE_IDS": "se.skolkik.app"
+	}
+	// Hemligheterna STATS_TOKEN och GOOGLE_PUSH_TOKEN sätts med `npx wrangler secret put <namn>`.
+}
